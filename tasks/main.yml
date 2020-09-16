@@ -1,0 +1,17 @@
+---
+- name: 'Create Apache config {{hostname}}.conf'
+  template:
+    src: apache-site.conf.j2
+    dest: '{{ apache_dir }}/sites-available/{{hostname}}.conf'
+    owner: root
+    group: root
+    mode: '0644'
+  notify: enable site
+
+- name: 'Create {{ document_root }} if it does not exist'
+  file:
+    path: '{{ document_root }}'
+    state: directory
+    owner: www-data
+    group: www-data
+  notify: restart apache
