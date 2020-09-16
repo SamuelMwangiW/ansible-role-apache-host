@@ -6,6 +6,6 @@ apache_dir: /etc/apache2
 document_root_base: '/projects/php/htdocs/'
 folder:
 public_folder: 'public'
-root_without_public: '{{ document_root_base }}{{folder}}'
+root_without_public: '{{ document_root_base }}/{{folder}}'
 root_with_public: '{{ root_without_public }}/{{ public_folder }}'
-document_root: '{{ root_with_public if public_folder is not sameas "" else root_without_public }}'
+document_root: '{{ root_with_public if public_folder else root_without_public }}'
