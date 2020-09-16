@@ -1,8 +1,8 @@
 ---
-- name: 'Create Apache config {{hostname}}.conf'
+- name: 'Create Apache config {{ hostname }}.conf'
   template:
     src: apache-site.conf.j2
-    dest: '{{ apache_dir }}/sites-available/{{hostname}}.conf'
+    dest: '{{ apache_dir }}/sites-available/{{ hostname }}.conf'
     owner: root
     group: root
     mode: '0644'

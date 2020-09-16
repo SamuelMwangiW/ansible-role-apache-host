@@ -1,9 +1,9 @@
 ---
 - name: enable site
-  shell: 'a2ensite {{ hostname }}'
+  shell: '/usr/sbin/a2ensite {{ hostname }}'
   notify: restart apache
 
 - name: restart apache
-  service: 
+  service:
     name: apache2
     state: restarted
