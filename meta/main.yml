@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: apache-site
+  role_name: apache_site
   author: mwangithegreat
   description: An Ansible Role that creates an Apache2 sites and adds a hosts file entry
   license: MIT
