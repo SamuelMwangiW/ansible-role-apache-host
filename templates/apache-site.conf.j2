@@ -1,7 +1,7 @@
-<VirtualHost *:{{ port }}>
-        ServerName {{hostname}}
-        DocumentRoot {{document_root}}/
-<Directory {{document_root}}/>
+<VirtualHost *:{{ apache_port }}>
+        ServerName {{ hostname }}
+        DocumentRoot {{ document_root }}/
+<Directory {{ document_root }}/>
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted

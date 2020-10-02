@@ -1,7 +1,7 @@
 ---
 hostname: '{{ ansible_fqdn }}'
 local_ip: '{{ ansible_default_ipv4.address }}'
-port: 80
+apache_port: 80
 apache_dir: /etc/apache2
 document_root_base: '/projects/php/htdocs/'
 folder:
